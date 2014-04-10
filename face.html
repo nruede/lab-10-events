@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<canvas id="sketch" width="1000" height="1000">
+</canvas>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', main);
+function main(){
+	for (i=200;i<=800;i=i+300){
+	var sketch = document.getElementById('sketch');
+	var context = sketch.getContext("2d");
+	context.fillStyle = "#009933"
+	context.beginPath();
+	context.arc(i, 200, 200, 0, 2*Math.PI, true);
+	context.closePath();
+	context.fill();
+
+	context.fillStyle = "#FFFFFF"
+	context.beginPath();
+	context.arc(i-120, 150, 40, 0, 2*Math.PI, true);
+	context.closePath();
+	context.fill();
+
+	context.beginPath();
+	context.arc(i-20, 150, 40, 0, 2*Math.PI, true);
+	context.closePath();
+	context.fill();
+
+	context.fillStyle = "#000000"
+	context.beginPath();
+	context.arc(i-140, 150, 20, 0, 2*Math.PI, true);
+	context.closePath();
+	context.fill();
+
+	context.fillStyle = "#000000"
+	context.beginPath();
+	context.arc(i-40, 150, 20, 0, 2*Math.PI, true);
+	context.closePath();
+	context.fill();
+
+	context.fillRect(i-100,250,100,30);
+	}
+}
+</script>
+</body>
+</html>
